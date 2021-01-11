@@ -19,7 +19,7 @@ stages:
   - name: deploy--apache-editor
     steps:
     - applyYamlConfig:
-        path: ./k8s-yaml/apacher-deployment.yaml
+        path: ./k8s-yaml/apache-deployment.yaml
     - applyYamlConfig:
         path: ./k8s-yaml/apache-service.yaml
     #- applyYamlConfig:
