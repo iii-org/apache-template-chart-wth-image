@@ -7,7 +7,7 @@ stages:
         buildContext: .
         tag: ${CICD_GIT_REPO_NAME}/${CICD_GIT_REPO_NAME}:${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
         pushRemote: true
-        registry: harbor.smarthome.csie.nuu.edu.tw
+        registry: reg.406.csie.nuu.edu.tw
       env:
         PLUGIN_BUILD_ARGS: --progress=tty --network=host
         PLUGIN_DEBUG: "true"
