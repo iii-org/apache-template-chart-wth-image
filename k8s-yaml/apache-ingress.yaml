@@ -13,7 +13,7 @@ spec:
     - "web.${CICD_GIT_BRANCH}.${CICD_GIT_REPO_NAME}.120.105.129.178.xip.io"
     secretName: web-${CICD_GIT_BRANCH}-${CICD_GIT_REPO_NAME}-xip-tls
   rules:
-  - host: "web.${CICD_GIT_BRANCH}.${CICD_GIT_REPO_NAME}.120.105.129.178.xip.io"
+  - host: "web.${CICD_GIT_BRANCH}.${CICD_GIT_REPO_NAME}.120.105.129.176.xip.io"
     http:
       paths:
       - backend:
