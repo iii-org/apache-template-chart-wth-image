@@ -12,12 +12,20 @@ stages:
         PLUGIN_BUILD_ARGS: --progress=tty --network=host
         PLUGIN_DEBUG: "true"
         PLUGIN_MIRROR: https://mirror.gcr.io
-  # 部屬 憑證issuer
+        
+  ## 部屬 憑證issuer (測試版本)
+  #- name: deploy-apache-issuer
+  #  steps:
+  #  - applyYamlConfig:
+  #      path: ./k8s-yaml/apache-issuer-staging.yaml
+
+  ## 部屬 憑證issuer (正式版本)
   - name: deploy-apache-issuer
     steps:
     - applyYamlConfig:
-        path: ./k8s-yaml/apache-issuer-staging.yaml
-  # 部屬 apache web
+        path: ./k8s-yaml/apache-issuer-production.yaml
+
+  ## 部屬 apache web
   - name: deploy-apache
     steps:
     - applyYamlConfig:
