@@ -17,7 +17,7 @@ stages:
       catalogTemplate: cattle-global-data:bitnami-apache
       version: 7.3.14
       answers:
-        image.pullSecrets: harbor-local
+        image.pullSecrets[0]: harbor-local
         image.registry: reg.406.csie.nuu.edu.tw
         image.repository: ${CICD_GIT_REPO_NAME}/${CICD_GIT_REPO_NAME}
         image.tag: ${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
