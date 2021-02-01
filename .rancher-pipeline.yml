@@ -1,5 +1,5 @@
 stages:
-- name: Publish apache service image
+- name: build and push docker image
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
