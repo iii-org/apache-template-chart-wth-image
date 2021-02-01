@@ -23,7 +23,7 @@ stages:
         image.tag: ${CICD_GIT_BRANCH}-${CICD_GIT_COMMIT}
         service.type: NodePort
       name: ${CICD_GIT_REPO_NAME}-node
-      targetNamespace: apache-cert-template
+      targetNamespace: ${CICD_GIT_REPO_NAME}
   - applyAppConfig:
       catalogTemplate: cattle-global-data:bitnami-apache
       version: 7.3.14
@@ -36,5 +36,5 @@ stages:
         ingress.hostname: apache-with-image.120.105.129.176.xip.io
         service.type: NodePort
       name: ${CICD_GIT_REPO_NAME}-xip
-      targetNamespace: apache-cert-template
+      targetNamespace: ${CICD_GIT_REPO_NAME}
 notification: {}
